@@ -10,22 +10,387 @@ import com.driver.repository.TicketRepository;
 import com.driver.repository.TrainRepository;
 import org.hibernate.id.IntegralDataTypeHolder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TicketService {
 
-    @Autowired
-    TicketRepository ticketRepository;
+
+    TicketRepository ticketRepository = new TicketRepository() {
+        @Override
+        public List<Ticket> findAll() {
+            return null;
+        }
+
+        @Override
+        public List<Ticket> findAll(Sort sort) {
+            return null;
+        }
+
+        @Override
+        public List<Ticket> findAllById(Iterable<Integer> iterable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Ticket> List<S> saveAll(Iterable<S> iterable) {
+            return null;
+        }
+
+        @Override
+        public void flush() {
+
+        }
+
+        @Override
+        public <S extends Ticket> S saveAndFlush(S s) {
+            return null;
+        }
+
+        @Override
+        public void deleteInBatch(Iterable<Ticket> iterable) {
+
+        }
+
+        @Override
+        public void deleteAllInBatch() {
+
+        }
+
+        @Override
+        public Ticket getOne(Integer integer) {
+            return null;
+        }
+
+        @Override
+        public <S extends Ticket> List<S> findAll(Example<S> example) {
+            return null;
+        }
+
+        @Override
+        public <S extends Ticket> List<S> findAll(Example<S> example, Sort sort) {
+            return null;
+        }
+
+        @Override
+        public Page<Ticket> findAll(Pageable pageable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Ticket> S save(S s) {
+            return null;
+        }
+
+        @Override
+        public Optional<Ticket> findById(Integer integer) {
+            return Optional.empty();
+        }
+
+        @Override
+        public boolean existsById(Integer integer) {
+            return false;
+        }
+
+        @Override
+        public long count() {
+            return 0;
+        }
+
+        @Override
+        public void deleteById(Integer integer) {
+
+        }
+
+        @Override
+        public void delete(Ticket ticket) {
+
+        }
+
+        @Override
+        public void deleteAll(Iterable<? extends Ticket> iterable) {
+
+        }
+
+        @Override
+        public void deleteAll() {
+
+        }
+
+        @Override
+        public <S extends Ticket> Optional<S> findOne(Example<S> example) {
+            return Optional.empty();
+        }
+
+        @Override
+        public <S extends Ticket> Page<S> findAll(Example<S> example, Pageable pageable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Ticket> long count(Example<S> example) {
+            return 0;
+        }
+
+        @Override
+        public <S extends Ticket> boolean exists(Example<S> example) {
+            return false;
+        }
+    };
 
     @Autowired
-    TrainRepository trainRepository;
+    TrainRepository trainRepository = new TrainRepository() {
+        @Override
+        public List<Train> findAll() {
+            return null;
+        }
+
+        @Override
+        public List<Train> findAll(Sort sort) {
+            return null;
+        }
+
+        @Override
+        public List<Train> findAllById(Iterable<Integer> iterable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Train> List<S> saveAll(Iterable<S> iterable) {
+            return null;
+        }
+
+        @Override
+        public void flush() {
+
+        }
+
+        @Override
+        public <S extends Train> S saveAndFlush(S s) {
+            return null;
+        }
+
+        @Override
+        public void deleteInBatch(Iterable<Train> iterable) {
+
+        }
+
+        @Override
+        public void deleteAllInBatch() {
+
+        }
+
+        @Override
+        public Train getOne(Integer integer) {
+            return null;
+        }
+
+        @Override
+        public <S extends Train> List<S> findAll(Example<S> example) {
+            return null;
+        }
+
+        @Override
+        public <S extends Train> List<S> findAll(Example<S> example, Sort sort) {
+            return null;
+        }
+
+        @Override
+        public Page<Train> findAll(Pageable pageable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Train> S save(S s) {
+            return null;
+        }
+
+        @Override
+        public Optional<Train> findById(Integer integer) {
+            return Optional.empty();
+        }
+
+        @Override
+        public boolean existsById(Integer integer) {
+            return false;
+        }
+
+        @Override
+        public long count() {
+            return 0;
+        }
+
+        @Override
+        public void deleteById(Integer integer) {
+
+        }
+
+        @Override
+        public void delete(Train train) {
+
+        }
+
+        @Override
+        public void deleteAll(Iterable<? extends Train> iterable) {
+
+        }
+
+        @Override
+        public void deleteAll() {
+
+        }
+
+        @Override
+        public <S extends Train> Optional<S> findOne(Example<S> example) {
+            return Optional.empty();
+        }
+
+        @Override
+        public <S extends Train> Page<S> findAll(Example<S> example, Pageable pageable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Train> long count(Example<S> example) {
+            return 0;
+        }
+
+        @Override
+        public <S extends Train> boolean exists(Example<S> example) {
+            return false;
+        }
+    };
 
     @Autowired
-    PassengerRepository passengerRepository;
+    PassengerRepository passengerRepository = new PassengerRepository() {
+        @Override
+        public List<Passenger> findAll() {
+            return null;
+        }
+
+        @Override
+        public List<Passenger> findAll(Sort sort) {
+            return null;
+        }
+
+        @Override
+        public List<Passenger> findAllById(Iterable<Integer> iterable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Passenger> List<S> saveAll(Iterable<S> iterable) {
+            return null;
+        }
+
+        @Override
+        public void flush() {
+
+        }
+
+        @Override
+        public <S extends Passenger> S saveAndFlush(S s) {
+            return null;
+        }
+
+        @Override
+        public void deleteInBatch(Iterable<Passenger> iterable) {
+
+        }
+
+        @Override
+        public void deleteAllInBatch() {
+
+        }
+
+        @Override
+        public Passenger getOne(Integer integer) {
+            return null;
+        }
+
+        @Override
+        public <S extends Passenger> List<S> findAll(Example<S> example) {
+            return null;
+        }
+
+        @Override
+        public <S extends Passenger> List<S> findAll(Example<S> example, Sort sort) {
+            return null;
+        }
+
+        @Override
+        public Page<Passenger> findAll(Pageable pageable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Passenger> S save(S s) {
+            return null;
+        }
+
+        @Override
+        public Optional<Passenger> findById(Integer integer) {
+            return Optional.empty();
+        }
+
+        @Override
+        public boolean existsById(Integer integer) {
+            return false;
+        }
+
+        @Override
+        public long count() {
+            return 0;
+        }
+
+        @Override
+        public void deleteById(Integer integer) {
+
+        }
+
+        @Override
+        public void delete(Passenger passenger) {
+
+        }
+
+        @Override
+        public void deleteAll(Iterable<? extends Passenger> iterable) {
+
+        }
+
+        @Override
+        public void deleteAll() {
+
+        }
+
+        @Override
+        public <S extends Passenger> Optional<S> findOne(Example<S> example) {
+            return Optional.empty();
+        }
+
+        @Override
+        public <S extends Passenger> Page<S> findAll(Example<S> example, Pageable pageable) {
+            return null;
+        }
+
+        @Override
+        public <S extends Passenger> long count(Example<S> example) {
+            return 0;
+        }
+
+        @Override
+        public <S extends Passenger> boolean exists(Example<S> example) {
+            return false;
+        }
+    };
 
 
     public Integer bookTicket(BookTicketEntryDto bookTicketEntryDto)throws Exception{

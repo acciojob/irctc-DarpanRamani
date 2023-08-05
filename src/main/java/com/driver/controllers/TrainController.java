@@ -22,7 +22,7 @@ import java.util.List;
 public class TrainController {
 
     @Autowired
-    TrainService trainService;
+    TrainService trainService = new TrainService();
 
     @PostMapping("/add")
     public Integer addTrain(@RequestBody AddTrainEntryDto train){

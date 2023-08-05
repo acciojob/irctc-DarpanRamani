@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("passenger")
 public class PassengerController {
 
-    @Autowired
-    PassengerService passengerService;
+    PassengerService passengerService = new PassengerService();
 
     @PostMapping("/create")
     public Integer registerPassenger(@RequestBody Passenger passenger){

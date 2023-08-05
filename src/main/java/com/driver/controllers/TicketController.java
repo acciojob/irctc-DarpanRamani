@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/ticket")
 public class TicketController {
 
-    @Autowired
-    TicketService ticketService;
+    TicketService ticketService = new TicketService();
 
     @PostMapping("/book")
     public Integer bookTicket(@RequestBody BookTicketEntryDto bookTicketEntryDto){
